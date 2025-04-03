@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "20b9b1aa-e9d3-4333-a241-37f426b1c99e",
+		"name": "ITM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13037809"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "Vehiculoes",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Vehiculoes",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Vehiculoes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"placa\": \"RPA777\",\r\n  \"tipoVehiculo\": \"Moto\",\r\n  \"marca\": \"Honda\",\r\n  \"color\": \"Azul\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/Vehiculoes",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Vehiculoes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Vehiculoes/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Vehiculoes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"placa\": \"string\",\r\n  \"tipoVehiculo\": \"string\",\r\n  \"marca\": \"string\",\r\n  \"color\": \"string\",\r\n  \"infraccions\": [\r\n    \"string\"\r\n  ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/Vehiculoes/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Vehiculoes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Vehiculoes/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Vehiculoes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "ROC202"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Infraccions",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Infraccions",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Infraccions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"placaVehiculo\": \"ROC204\",\r\n  \"fechaInfraccion\": \"2025-04-02T23:01:47.084Z\",\r\n  \"tipoInfraccion\": \"string\",\r\n  \"PlacaVehiculoNavigation\": {\r\n    \"placa\": \"ROC204\",\r\n    \"tipoVehiculo\": \"Carro\",\r\n    \"marca\": \"Mustang\",\r\n    \"color\": \"Rojo\"\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/Infraccions",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Infraccions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Infraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Infraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idFotoMulta\": 0,\r\n  \"placaVehiculo\": \"string\",\r\n  \"fechaInfraccion\": \"2025-04-02T23:01:47.090Z\",\r\n  \"tipoInfraccion\": \"string\",\r\n  \"fotoInfraccions\": [\r\n    \"string\"\r\n  ],\r\n  \"placaVehiculoNavigation\": {\r\n    \"placa\": \"string\",\r\n    \"tipoVehiculo\": \"string\",\r\n    \"marca\": \"string\",\r\n    \"color\": \"string\",\r\n    \"infraccions\": [\r\n      \"string\"\r\n    ]\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{API_URL}}/Infraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Infraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/Infraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"Infraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "FotoInfraccions",
+					"item": [
+						{
+							"name": "/",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/FotoInfraccions",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"FotoInfraccions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/FotoInfraccions",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"FotoInfraccions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/FotoInfraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"FotoInfraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/FotoInfraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"FotoInfraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/{id}",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{API_URL}}/FotoInfraccions/:id",
+									"host": [
+										"{{API_URL}}"
+									],
+									"path": [
+										"FotoInfraccions",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "https://localhost:7285/api",
+			"type": "string"
+		}
+	]
+}
